@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南华国民型华文小学 2026-2028 家教协会复选会议记录</title>
+    <style>
+        /* CSS Reset & Print Adjustments */
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "SimHei", "Times New Roman", Times, serif;
+            background-color: #525659;
+            margin: 0;
+            padding: 20px;
+            color: #1a202c;
+        }
+        .a4-page {
+            width: 210mm;
+            min-height: 297mm;
+            background-color: #ffffff;
+            margin: 0 auto;
+            padding: 20mm 15mm;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        @media print {
+            body {
+                background-color: #ffffff;
+                padding: 0;
+            }
+            .a4-page {
+                box-shadow: none;
+                margin: 0;
+                padding: 15mm 10mm;
+                width: 100%;
+                min-height: auto;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+
+        /* Letterhead Settings */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            border-bottom: 1px solid #000;
+        }
+        .header img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+            cursor: move; /* Indicate draggable */
+        }
+        .header-text {
+            text-align: center;
+            flex-grow: 1;
+            padding: 0 10px;
+        }
+        .header-text h1 {
+            font-size: 13pt;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        .header-text h2 {
+            font-size: 15pt;
+            margin: 3px 0;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        .header-text p {
+            font-size: 9pt;
+            margin: 2px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Title */
+        .doc-title {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .doc-title h3 {
+            font-size: 13.5pt;
+            margin: 0;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* Meeting Details */
+        .meeting-info {
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 11pt;
+            border-collapse: collapse;
+        }
+        .meeting-info td {
+            padding: 3px 0;
+            vertical-align: top;
+        }
+        .meeting-info td:first-child {
+            width: 10%;
+            font-weight: bold;
+        }
+        .meeting-info td:nth-child(2) {
+            width: 2%;
+        }
+
+        /* Minutes Content */
+        .content {
+            font-size: 11pt;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .agenda-title {
+            font-weight: bold;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            font-size: 11.5pt;
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-left: 4px solid #2b6cb0;
+        }
+        .agenda-item {
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+        }
+        .agenda-number {
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Exact PIBG Table Styling */
+        .table-container {
+            margin: 15px 0;
+            width: 100%;
+        }
+        table.pibg-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #222;
+            font-size: 10.5pt;
+        }
+        table.pibg-table th, table.pibg-table td {
+            border: 1px solid #444;
+            padding: 8px 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        table.pibg-table th {
+            background-color: #e2e8f0;
+            color: #1a202c;
+            font-weight: bold;
+            font-size: 11pt;
+        }
+        table.pibg-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        .appointed {
+            color: #5a67d8;
+            font-style: italic;
+        }
+        .enbloc {
+            color: #2b6cb0;
+        }
+        .assembly {
+            color: #c53030;
+        }
+
+        /* Additional Formatting */
+        .budget-list {
+            margin-top: 5px;
+            margin-bottom: 8px;
+            padding-left: 20px;
+        }
+        .budget-list li {
+            margin-bottom: 6px;
+        }
+
+        /* Signatures */
+        .signatures {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 35px;
+            padding: 0 10px;
+            font-family: "Times New Roman", Times, serif; 
+        }
+        .sig-block {
+            width: 45%;
+            text-align: left;
+        }
+        .sig-line {
+            border-bottom: 1px dashed #000;
+            margin: 40px 0 5px 0;
+            width: 100%;
+        }
+        .sig-name {
+            font-weight: bold;
+            font-size: 10.5pt;
+            text-transform: uppercase;
+        }
+        .sig-role {
+            font-size: 10pt;
+            line-height: 1.3;
+        }
+
+        /* Editor specific styles (Hidden on Print) */
+        .hover-highlight {
+            outline: 2px dashed #4299e1 !important;
+            outline-offset: -1px;
+            background-color: rgba(66, 153, 225, 0.05);
+            transition: all 0.1s ease-in-out;
+        }
+        [contenteditable]:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print" style="text-align: center; margin-bottom: 15px; color: white; font-family: Arial, sans-serif;">
+        <i>提示：当前处于<b>自由编辑模式</b>。您可以点击任意文字修改、拖拽图片、或悬停在段落/表格行上方来<b>复制(➕) 或 删除(🗑️)</b>。<br>完成后，请使用 <b>Ctrl + P</b> 以 A4 格式打印此会议记录，并确保已开启“背景图形 (Background Graphics)”。</i>
+    </div>
+
+    <!-- PAGE 1 -->
+    <div class="a4-page" contenteditable="true">
+        <!-- Letterhead -->
+        <div class="header">
+            <img src="https://i.postimg.cc/MTnLVmY1/ts25-logo-png-1003x1024.png" alt="Logo TS25">
+            <div class="header-text">
+                <h1>KEMENTERIAN PENDIDIKAN MALAYSIA</h1>
+                <h2>SEKOLAH JENIS KEBANGSAAN (CINA) NAN HWA</h2>
+                <p>BUKIT KANGKAR, 84400 SUNGAI MATI, TANGKAK, JOHOR DARUL TAKZIM.</p>
+                <p>Kod Sekolah: JBC9013 | Tel / Faks: 06-975 6502 | Emel: jbc9013@moe.edu.my</p>
+            </div>
+            <img src="https://i.postimg.cc/htX5QrPQ/20251117-090239.jpg" alt="Logo Sekolah">
+        </div>
+
+        <!-- Document Title -->
+        <div class="doc-title">
+            <h3>2026-2028 家教协会理事会复选会议记录</h3>
+        </div>
+
+        <table class="meeting-info">
+            <tr>
+                <td>日期</td>
+                <td>:</td>
+                <td>2026年4月3日（星期五）</td>
+            </tr>
+            <tr>
+                <td>时间</td>
+                <td>:</td>
+                <td>晚上 7时30分</td>
+            </tr>
+            <tr>
+                <td>地点</td>
+                <td>:</td>
+                <td>南华华小 5M 课室</td>
+            </tr>
+            <tr>
+                <td>出席者</td>
+                <td>:</td>
+                <td>请参阅附上的出席名单 (10 / 15)</td>
+            </tr>
+        </table>
+
+        <div class="content">
+            <div class="agenda-title">1.0 校长致欢迎辞</div>
+            <div class="agenda-item">
+                <span class="agenda-number">1.1</span>
+                陈韵思校长欢迎各位拨冗出席 2026-2028 年家教协会 (PIBG) 理事会复选会议。
+            </div>
+
+            <div class="agenda-title">2.0 2026-2028 家教协会理事会选举</div>
+            <div class="agenda-item">
+                <span class="agenda-number">2.1</span>
+                家教协会理事会的提名与选举过程及完整新届理事名单如下：
+                
+                <div class="table-container">
+                    <table class="pibg-table">
+                        <thead>
+                            <tr>
+                                <th>职位</th>
+                                <th>姓名</th>
+                                <th>提议者</th>
+                                <th>附议者</th>
+                                <th>提议截止</th>
+                                <th>附议截止</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Core Executive Roles -->
+                            <tr>
+                                <td>主席</td>
+                                <td>罗建彪</td>
+                                <td>杜业水</td>
+                                <td>吴德宝</td>
+                                <td>吴德宝</td>
+                                <td>颜欣伟</td>
+                            </tr>
+                            <tr>
+                                <td>副主席</td>
+                                <td>杜业水</td>
+                                <td>莫文国</td>
+                                <td>颜欣伟</td>
+                                <td>杜振渊</td>
+                                <td>吴德宝</td>
+                            </tr>
+                            <tr>
+                                <td>秘书 (教师)</td>
+                                <td>王艺蓉</td>
+                                <td class="appointed">校方委任</td>
+                                <td class="appointed">-</td>
+                                <td class="appointed">-</td>
+                                <td class="appointed">-</td>
+                            </tr>
+                            <tr>
+                                <td>副秘书 (教师)</td>
+                                <td>刘音冰</td>
+                                <td class="appointed">校方委任</td>
+                                <td class="appointed">-</td>
+                                <td class="appointed">-</td>
+                                <td class="appointed">-</td>
+                            </tr>
+                            <tr>
+                                <td>财政</td>
+                                <td>吴德宝</td>
+                                <td>莫文国</td>
+                                <td>杜业水</td>
+                                <td>颜欣伟</td>
+                                <td>杜振渊</td>
+                            </tr>
+                            <tr>
+                                <td>副财政 (教师)</td>
+                                <td>张淑衔</td>
+                                <td class="appointed">校方委任</td>
+                                <td class="appointed">-</td>
+                                <td class="appointed">-</td>
+                                <td class="appointed">-</td>
+                            </tr>
+                            
+                            <!-- Parent Committee Members (En-Bloc / 原委理事) -->
+                            <tr>
+                                <td>家长理事</td>
+                                <td>莫文国</td>
+                                <td class="enbloc">颜欣伟</td>
+                                <td class="enbloc">杜振渊</td>
+                                <td class="enbloc">一致通过</td>
+                                <td class="enbloc">一致通过</td>
+                            </tr>
+                            <tr>
+                                <td>家长理事</td>
+                                <td>杜振渊</td>
+                                <td class="enbloc">颜欣伟</td>
+                                <td class="enbloc">杜振渊</td>
+                                <td class="enbloc">一致通过</td>
+                                <td class="enbloc">一致通过</td>
+                            </tr>
+                            <tr>
+                                <td>家长理事</td>
+                                <td>颜欣伟</td>
+                                <td class="enbloc">颜欣伟</td>
+                                <td class="enbloc">杜振渊</td>
+                                <td class="enbloc">一致通过</td>
+                                <td class="enbloc">一致通过</td>
+                            </tr>
+                            <tr>
+                                <td>家长理事</td>
+                                <td>陈慈达</td>
+                                <td class="enbloc">颜欣伟</td>
+                                <td class="enbloc">杜振渊</td>
+                                <td class="enbloc">一致通过</td>
+                                <td class="enbloc">一致通过</td>
+                            </tr>
+                            <tr>
+                                <td>家长理事</td>
+                                <td>杜振兴</td>
+                                <td class="enbloc">颜欣伟</td>
+                                <td class="enbloc">杜振渊</td>
+                                <td class="enbloc">一致通过</td>
+                                <td class="enbloc">一致通过</td>
+                            </tr>
+                            <tr>
+                                <td>家长理事</td>
+                                <td>陈贤宾</td>
+                                <td class="enbloc">颜欣伟</td>
+                                <td class="enbloc">杜振渊</td>
+                                <td class="enbloc">一致通过</td>
+                                <td class="enbloc">一致通过</td>
+                            </tr>
+                
+                            <!-- Parent Committee Members (Newly Added via Motion / 提议增加理事) -->
+                            <tr>
+                                <td>家长理事 (新增)</td>
+                                <td>杜家宝</td>
+                                <td>吴德宝</td>
+                                <td>莫文国</td>
+                                <td class="assembly">大会通过</td>
+                                <td class="assembly">大会通过</td>
+                            </tr>
+                            <tr>
+                                <td>家长理事 (新增)</td>
+                                <td>沈建雄</td>
+                                <td>吴德宝</td>
+                                <td>杜振渊</td>
+                                <td class="assembly">大会通过</td>
+                                <td class="assembly">大会通过</td>
+                            </tr>
+                
+                            <!-- Teacher Committee Members (Appointed) -->
+                            <tr>
+                                <td>教师理事</td>
+                                <td>杨淯嫃</td>
+                                <td class="appointed">校方委任</td>
+                                <td class="appointed">-</td>
+                                <td class="appointed">-</td>
+                                <td class="appointed">-</td>
+                            </tr>
+                            <tr>
+                                <td>教师理事</td>
+                                <td>黄佩佩</td>
+                                <td class="appointed">校方委任</td>
+                                <td class="appointed">-</td>
+                                <td class="appointed">-</td>
+                                <td class="appointed">-</td>
+                            </tr>
+                            <tr>
+                                <td>教师理事</td>
+                                <td>蔡露诗</td>
+                                <td class="appointed">校方委任</td>
+                                <td class="appointed">-</td>
+                                <td class="appointed">-</td>
+                                <td class="appointed">-</td>
+                            </tr>
+                
+                            <!-- Auditors -->
+                            <tr>
+                                <td>查账 1 (教师)</td>
+                                <td>黄雪凤</td>
+                                <td class="appointed">校方委任</td>
+                                <td class="appointed">-</td>
+                                <td class="appointed">-</td>
+                                <td class="appointed">-</td>
+                            </tr>
+                            <tr>
+                                <td>查账 2 (家长)</td>
+                                <td>颜欣勇</td>
+                                <td>刘音冰</td>
+                                <td>蔡露诗</td>
+                                <td class="assembly">一致通过</td>
+                                <td class="assembly">一致通过</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="agenda-item">
+                <span class="agenda-number">2.2</span>
+                <b>校长与家协委任：</b><br> 
+                吴德宝先生提议增加2名新理事，由莫文国先生附议。杜振渊先生提议杜家宝先生，而吴德宝先生提议沈健雄先生。全体8名家长理事均获得一致通过。<br>
+                刘音冰提议委任颜欣勇为家协查账，蔡露诗附议。
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="a4-page page-break" contenteditable="true">
+        <div class="content">
+            <div class="agenda-title">3.0 2026年校长报告</div>
+            <div class="agenda-item">
+                <span class="agenda-number">3.1</span>
+                <b>学校最新统计：</b> 2026年全校学生总人数为148人（特殊教育班12人、学前教育班18人、普通班118人）。学校目前属 B 型学校。教师共18人，非教学人员 (AKP) 4人，清洁工人5人，保安人员4人。
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-number">3.2</span>
+                <b>上课时间：</b> 休息时间缩短至20分钟，放学时间推迟5分钟。星期五的放学时间设定为上午 11 时 50 分。
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-number">3.3</span>
+                <b>辅导班：</b> 学校在星期一为四年级和六年级学生提供辅导班。请董事长向校友会申请 RM 3,400，作为教师补习津贴赞助。
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-number">3.4</span>
+                <b>收费与课外活动：</b> 会议通过了营养餐计划（每年 RM 60）、精明课室基金（每年 RM 7）、作业簿购买费用，以及才艺班（扯铃、跆拳道、田径、舞蹈）的收费。
+            </div>
+
+            <div class="agenda-title">4.0 引起事项 / 其他事项</div>
+            <div class="agenda-item">
+                <span class="agenda-number">4.1</span>
+                <b>宣誓就职典礼及谢师宴：</b> 董家协建议就职典礼联合南华校友会一起进行。建议于2026年6月13日（星期六）晚上7时，在 Ann Majestic Cuisine举行，并由董事长邀请侯德成担任监督嘉宾。大会一致通过。
+            </div>
+            <div class="agenda-item">
+                <span class="agenda-number">4.2</span>
+                <b>2026年常年活动预算：</b> 
+                <ul class="budget-list">
+                    <li>年度运动会（2026年5月21日）：RM 3000.00 &rarr; 此经费将由董事部承担。</li>
+                    <li>精明课室更换投影机的费用也由董事部承担，共计 RM 9498.00。</li>
+                    <li>其余的活动将在下一次会议讨论经费。</li>
+                </ul>
+            </div>
+
+            <div class="agenda-title">5.0 闭会</div>
+            <div class="agenda-item">
+                <span class="agenda-number">5.1</span>
+                会议于晚上 9 时 30 分圆满结束。主席恭贺新届理事，并感谢大家愿意为南华华小的发展贡献时间与精力。
+            </div>
+        </div>
+
+        <!-- Signatures (Bahasa Malaysia with Chinese Names) -->
+        <div class="signatures">
+            <div class="sig-block">
+                <p>Disediakan oleh,</p>
+                <div class="sig-line"></div>
+                <div class="sig-name">Ong Yi Rong (王艺蓉)</div>
+                <div class="sig-role">Setiausaha PIBG (Sesi 2026-2028)<br>SJK(C) Nan Hwa</div>
+            </div>
+            <div class="sig-block">
+                <p>Disemak dan disahkan oleh,</p>
+                <div class="sig-line"></div>
+                <div class="sig-name">Loh Kian Piaw (罗建彪)</div>
+                <div class="sig-role">Pengerusi PIBG (Sesi 2026-2028)<br>SJK(C) Nan Hwa</div>
+            </div>
+        </div>
+        
+        <div class="signatures" style="margin-top: 25px;">
+            <div class="sig-block">
+            </div>
+            <div class="sig-block">
+                <p>Disahkan oleh,</p>
+                <div class="sig-line"></div>
+                <div class="sig-name">Tan Yun Sze (陈韵思)</div>
+                <div class="sig-role">Guru Besar / Penasihat PIBG<br>SJK(C) Nan Hwa</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Builder Javascript (To make rows and blocks addable/removable) -->
+    <script>
+        (function() {
+            // Create Floating Edit Menu
+            const menuHTML = `
+                <div id="builder-edit-menu" class="no-print" contenteditable="false" style="
+                    position: absolute; 
+                    display: none; 
+                    background: #2d3748; 
+                    border-radius: 6px; 
+                    box-shadow: 0 4px 10px rgba(0,0,0,0.4); 
+                    z-index: 10000; 
+                    padding: 6px;
+                    gap: 6px;
+                ">
+                    <button id="be-add" style="background:#48bb78; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer; font-size:13px; font-weight:bold;" title="Duplicate this block">➕ Duplicate</button>
+                    <button id="be-del" style="background:#f56565; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer; font-size:13px; font-weight:bold;" title="Delete this block">🗑️ Delete</button>
+                    <button id="be-img" style="background:#4299e1; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer; font-size:13px; font-weight:bold; display:none;" title="Change Image URL">🖼️ Change URL</button>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', menuHTML);
+
+            const editMenu = document.getElementById('builder-edit-menu');
+            const btnAdd = document.getElementById('be-add');
+            const btnDel = document.getElementById('be-del');
+            const btnImg = document.getElementById('be-img');
+            
+            let currentTarget = null;
+            
+            // Defines which sections triggers the hover tools (rows, agenda, titles, signature blocks, images, and lists)
+            const targetSelectors = 'tr, .agenda-item, .agenda-title, .sig-block, img, .meeting-info tr, li';
+
+            document.addEventListener('mouseover', function(e) {
+                // Do not trigger if hovering over the tools menu itself
+                if (e.target.closest('#builder-edit-menu')) return;
+                
+                const target = e.target.closest(targetSelectors);
+                if (target) {
+                    currentTarget = target;
+                    
+                    // Show specific buttons if image
+                    if (target.tagName.toLowerCase() === 'img') {
+                        btnImg.style.display = 'inline-block';
+                        btnAdd.style.display = 'none'; // Duplicate native drag is easier, but let's hide it to avoid clutter
+                    } else {
+                        btnImg.style.display = 'none';
+                        btnAdd.style.display = 'inline-block';
+                    }
+
+                    // Position the floating menu just above the target
+                    const rect = target.getBoundingClientRect();
+                    editMenu.style.display = 'flex';
+                    editMenu.style.top = (window.scrollY + rect.top - 40) + 'px';
+                    editMenu.style.left = (window.scrollX + rect.left) + 'px';
+                    
+                    // Apply visual highlight
+                    document.querySelectorAll('.hover-highlight').forEach(el => el.classList.remove('hover-highlight'));
+                    target.classList.add('hover-highlight');
+                }
+            });
+
+            // Action: Duplicate Block/Row
+            btnAdd.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (currentTarget) {
+                    const clone = currentTarget.cloneNode(true);
+                    clone.classList.remove('hover-highlight');
+                    currentTarget.parentNode.insertBefore(clone, currentTarget.nextSibling);
+                }
+            });
+
+            // Action: Delete Block/Row
+            btnDel.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (currentTarget) {
+                    editMenu.style.display = 'none';
+                    currentTarget.remove();
+                    currentTarget = null;
+                }
+            });
+
+            // Action: Replace Image URL
+            btnImg.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (currentTarget && currentTarget.tagName.toLowerCase() === 'img') {
+                    const newSrc = prompt('Enter the new Image URL:', currentTarget.src);
+                    if (newSrc && newSrc.trim() !== '') {
+                        currentTarget.src = newSrc.trim();
+                    }
+                }
+            });
+
+            // Clean up highlighted states and hide menu when clicking on empty space
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest(targetSelectors) && !e.target.closest('#builder-edit-menu')) {
+                    editMenu.style.display = 'none';
+                    document.querySelectorAll('.hover-highlight').forEach(el => el.classList.remove('hover-highlight'));
+                }
+            });
+            
+            // Allow double clicking an image as a quick shortcut to replace it
+            document.addEventListener('dblclick', function(e) {
+                if(e.target.tagName.toLowerCase() === 'img') {
+                    const newSrc = prompt('Enter the new Image URL:', e.target.src);
+                    if (newSrc && newSrc.trim() !== '') e.target.src = newSrc.trim();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
